@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="expenseTracker">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="mat-typography" ng-controller="expenseTrackerController">
+
+    <div class="container" ng-show="!isLoggedIn && showSignUp">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h3 class="text-center mt-5">Sign Up</h3>
+                <form ng-submit="signUp()">
+                    <div class="mb-3">
+                        <label for="newUsername" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="newUsername" ng-model="newUsername" placeholder="Enter username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="newPassword" ng-model="newPassword" placeholder="Enter password" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                        <button type="button" class="btn btn-link" ng-click="toggleForms()">Already have an account? Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" ng-show="!isLoggedIn && !showSignUp">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <h3 class="text-center mt-5">Login</h3>
+                <form ng-submit="login()">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <input type="text" class="form-control" id="username" ng-model="username" placeholder="Enter username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" ng-model="password" placeholder="Enter password" required>
+                    </div>
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="button" class="btn btn-link" ng-click="toggleForms()">Don't have an account? Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

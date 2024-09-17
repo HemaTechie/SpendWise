@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: #060614;
+    color: white;
+    height: 100%;
+}
+
+p {
+    font-size: clamp(.7rem,0.8vw,1.2rem);
+}
+h1{
+    font-size: clamp(2rem,4.5vw,3rem);
+}
+h2{
+    font-size: clamp(1.5rem,3.5vw,2.5rem);
+}
+h3{
+    font-size: clamp(1.25rem,2.5vw,2rem);
+}
+h4{
+    font-size: clamp(1rem,2vw,1.8rem);
+}
+h5{
+    font-size: clamp(0.875rem,1.75vw,1.5rem);
+}
+h6{
+    font-size: clamp(0.75rem,1.5vw,1.25rem);
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-expand-sm .navbar-nav .nav-link {
+    font-size: clamp(0.5rem, 1.3vw, 1.5rem);
+    font-weight: 300;
+    margin-right: clamp(1rem, 2vw, 3rem);
+}
+
+.navbar-expand-sm .navbar-nav .nav-link:first-child {
+    margin-left: clamp(1rem, 1vw, 2rem);
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    background: transparent;
+    outline: none;
+    margin-right: clamp(1rem, 1vw, 2rem);
+}
+
+.navbar-toggler-icon {
+    width: clamp(1.4rem, 5.3vw, 5rem);
+}
+
+.nav-link-blue {
+    color: white;
+    font-family: inherit;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link-blue:hover {
+    color: whitesmoke;
+}
+
+.nav-link-blue::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.125rem;
+    background: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link-blue:hover::after {
+    width: 100%;
+}
+
+.box {
+    border: 0.015rem solid grey;
+    border-radius: 0.25rem;
+}
+
+html, body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
